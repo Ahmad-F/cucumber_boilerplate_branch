@@ -1,0 +1,10 @@
+source "https://rubygems.org"
+
+gem "cucumber"
+gem "rspec"
+gem "page-object"
+gem "data_magic"
+gem "require_all"
+gem "fig_newton"
+gem "pretty_face"
+gem "dbi"

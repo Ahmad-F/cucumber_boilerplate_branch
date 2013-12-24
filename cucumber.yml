@@ -1,0 +1,3 @@
+default: --no-source --color --format PrettyFace::Formatter::Html --out results/index.html
+int: FIG_NEWTON_FILE=int.yml --no-source --color --format PrettyFace::Formatter::Html --out results/index.html
+dev: FIG_NEWTON_FILE=dev.yml --no-source --color --format PrettyFace::Formatter::Html --out results/index.html
