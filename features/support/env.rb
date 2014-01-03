@@ -7,7 +7,7 @@ require "fig_newton"
 require "pretty_face"
 
 # local lib
-require_relative "features/support/lib/sql.rb"
+require_relative "lib/sql.rb"
 
 # require_all gem
 require_rel "pages"

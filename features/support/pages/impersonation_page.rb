@@ -1,4 +1,4 @@
-class HelloWorldPage
+class ImpersonationPage
   include PageObject
   include DataMagic
 
@@ -12,8 +12,8 @@ class HelloWorldPage
   button(:login, :id => "QuickLogInCFImageButton")
 
   # Page methods
-  def impersonate(type, value)
-    self.send(type.to_sym, value)
+  def impersonate(field, value)
+    self.send("#{field}=".to_sym, value)
     self.login
   end
 end

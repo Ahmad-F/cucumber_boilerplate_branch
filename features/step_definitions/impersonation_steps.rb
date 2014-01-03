@@ -1,9 +1,9 @@
 Given(/^I am on the impersonation page$/) do
-  visit(HelloWorldPage)
+  visit(ImpersonationPage)
 end
 
-When(/^I impersonate the "(.*)" "(.*)"$/) do |type, value|
-  on(HelloWorldPage).impersonate(type, value)
+When(/^I impersonate the "(.*)" "(.*)"$/) do |field, value|
+  on(ImpersonationPage).impersonate(field, value)
 end
 
 Then(/^I should see the Valuation Summary Page$/) do
