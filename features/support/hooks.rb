@@ -9,8 +9,7 @@ end
 
 After do |scenario|
   if scenario.failed?
-    time_stamp = Time.now.strftime("%Y_%m_%d_%H_%M")
-    filename = "error-#{@current_page.class}-#{time_stamp}.png"
+    filename = "error-#{@current_page.class}-#{Time.now.strftime("%Y-%m-%d_%H-%M-%S")}.png"
     @current_page.save_screenshot(filename)
     embed(filename, 'image/png')
   end
