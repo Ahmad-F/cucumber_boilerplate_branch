@@ -1,10 +1,10 @@
 require "watir-webdriver"
 
 Before do
-  debug_profile = Selenium::WebDriver::Firefox::Profile.new
-  debug_profile["network.automatic-ntlm-auth.trusted-uris"] = "extranetdev.chathamfinancial.com"
+  trusted_profile = Selenium::WebDriver::Firefox::Profile.new
+  trusted_profile["network.automatic-ntlm-auth.trusted-uris"] = "extranetdev.chathamfinancial.com"
 
-  @browser = Watir::Browser.new(:firefox, :profile => debug_profile)
+  @browser = Watir::Browser.new(:firefox, :profile => trusted_profile)
 end
 
 After do |scenario|
