@@ -1,15 +1,21 @@
 require "watir-webdriver"
 
 Before do
-  trusted_profile = Selenium::WebDriver::Firefox::Profile.new
-  trusted_profile["network.automatic-ntlm-auth.trusted-uris"] = "extranetdev.chathamfinancial.com"
+  # Set browser to use here
+  browser_vendor = :firefox
 
-  @browser = Watir::Browser.new(:firefox, :profile => trusted_profile)
+  if browser_vendor == :firefox
+    trusted_profile = Selenium::WebDriver::Firefox::Profile.new
+    trusted_profile["network.automatic-ntlm-auth.trusted-uris"] = FigNewton.base_url
+    @browser = Watir::Browser.new(browser_vendor, :profile => trusted_profile)
+  else
+    @browser = Watir::Browser.new(browser_vendor)
+  end
 end
 
 After do |scenario|
   if scenario.failed?
-    filename = "error-#{@current_page.class}-#{Time.now.strftime("%Y-%m-%d_%H-%M-%S")}.png"
+    filename = "ERR-#{@current_page.class}-#{Time.now.strftime("%Y-%m-%d_%H-%M-%S")}.png"
     @current_page.save_screenshot(filename)
     embed(filename, 'image/png')
   end
