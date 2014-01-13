@@ -3,6 +3,7 @@ Given(/^I am on the impersonation page$/) do
 end
 
 When(/^I impersonate the "(.*)" "(.*)"$/) do |field, value|
+  field = "sponsor_code" if field.downcase == "sponsor code"
   on(ImpersonationPage).impersonate(field, value)
 end
 

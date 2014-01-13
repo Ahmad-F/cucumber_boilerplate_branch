@@ -13,7 +13,7 @@ class ImpersonationPage
 
   # Page methods
   def impersonate(field, value)
-    self.send("#{field}=".to_sym, value)
+    self.send("#{field.downcase}=", value)
     self.login
   end
 end

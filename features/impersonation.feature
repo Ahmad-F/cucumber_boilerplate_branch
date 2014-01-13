@@ -5,5 +5,5 @@ Feature: Impersonation
 
 Scenario: Impersonate with sponsor code
   Given I am on the impersonation page
-  When I impersonate the "sponsor_code" "CNBALMRM"
+  When I impersonate the "sponsor code" "CNBALMRM"
   Then I should see the Valuation Summary Page

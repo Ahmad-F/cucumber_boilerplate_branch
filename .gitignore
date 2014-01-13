@@ -2,4 +2,6 @@
 .idea/
 results/
 testresults/
+private.yml
+private.yaml
 *.png
