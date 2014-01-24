@@ -1,3 +1,4 @@
-default: --no-source --color --format progress --format PrettyFace::Formatter::Html --out results/index.html
+#default: --no-source --color --format progress --format PrettyFace::Formatter::Html --out results/index.html
+default: --no-source --color --format pretty
 int: FIG_NEWTON_FILE=int.yml --no-source --color --format progress --format PrettyFace::Formatter::Html --out results/index.html
 dev: FIG_NEWTON_FILE=dev.yml --no-source --color --format progress --format PrettyFace::Formatter::Html --out results/index.html
