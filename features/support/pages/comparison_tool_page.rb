@@ -5,7 +5,7 @@ class ComparisonToolPage
   text_field(:sponsor, :id => "Sponsor")
   div(:calculate, :id => "comparisonSubmit")
   link(:title_bar, :id => "columnChooser_ComparisonToolResults")
-  image(:calculating, :src => "../../img/newweb/chathamdirect-loadingbar.gif")
+  h1(:calculating, :text => "This could take a while....we are performing heavy calculations")
 
   def compare_transactions(curve_date, sponsor)
     self.send("curve_date=", curve_date)

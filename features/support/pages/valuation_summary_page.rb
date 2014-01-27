@@ -8,4 +8,5 @@ class ValuationSummaryPage
 
   link(:acct_nav, :class => "accountingNav")
   link(:acct_treatments, :text => "Treatments")
+  div(:loading, :id => "load_ValuationSummaryGrid")
 end

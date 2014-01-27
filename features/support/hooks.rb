@@ -15,9 +15,9 @@ end
 
 After do |scenario|
   if scenario.failed?
-    filename = "ERR-#{@current_page.class}-#{Time.now.strftime("%Y-%m-%d_%H-%M-%S")}.png"
+    filename = "ERR-#{@current_page.class}-#{Time.now.strftime("%m-%d-%Y_%H-%M-%S")}.png"
     @current_page.save_screenshot(filename)
-    embed(filename, 'image/png')
+    embed(filename, "image/png")
   end
 
   @browser.close

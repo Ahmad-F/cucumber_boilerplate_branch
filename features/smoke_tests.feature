@@ -1,4 +1,4 @@
-Feature: Creating basic smoke tests to verify there are no major web errors
+Feature: Basic smoke tests to verify no major errors on the web
   As a Chatham tester
   I want to verify that there are no major problems on extranet
   So I can go home before midnight
@@ -15,6 +15,11 @@ Feature: Creating basic smoke tests to verify there are no major web errors
     |      field     |         value          |
     |   sponsor code |        CNBALMRM        |
     |      user      |         Afarhat        |
+
+  Scenario: User can run accounting treatment for a certain CRN
+    When I impersonate the "sponsor code" "QAAUTOCOMP"
+    And I click the accounting treatments tab
+    Then I should see the accounting workflow tab
 
 #INTERNAL LINKS PAGE: Commodity rates control report
   Scenario: Internal Links are accessible
